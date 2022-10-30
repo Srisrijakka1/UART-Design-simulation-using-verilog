@@ -1,0 +1,53 @@
+2.Introduction to UART
+what is UART?
+ > Universal Asynchronous Reciever Transmitter
+ > UART is an IC(Integrated Circuit)
+ > parallel data <converts> serial data
+(8bit parallel data)  UART(SBUF reg)      (8bit serial data) 
+                      _______ 
+            <Tx/Rx>D0|   []  |
+            <Tx/Rx>D1|   []  |
+            <Tx/Rx>D2|   []  |
+		  <Tx/Rx>D3|   []  |
+		  <Tx/Rx>D4|   []  |
+            <Tx/Rx>D5|   []  |
+            <Tx/Rx>D6|   []  |
+            <Tx/Rx>D7|   []  |<Rx/tx> [D0][D1][D2][D3][D4][D5][D6][D7]
+                     |_______|
+    UART contains SBUF reg is a shift register. 
+	Conversions:    
+      Parallel > to > Serial : shifting & transmitting
+      Serial > to > Parallel : Recieving & shifting
+
+Data formate of UART?
+   startbit + Data   + ParityBit(optional) + stopbit
+   0          6~8bit   PB                    1,1.5,2
+
+
+Transmission                   &              Reception   Operation of UART:
+____________                  ___            _______________________________
+	     
+      ___clk                                       clk____
+     |    |                                        |      |
+Baud rate |                                        |     Baud rate
+Generator |                                        |     Generator
+     |--->UART                                     UART<--|
+"tickpulse"  _________                         _________"tickpulse"
+         >D0|    []   |                       |    []   |>D0   
+         >D1|    []   |                       |    []   |>D1
+         >D2|    []   |                       |    []   |>D2
+         >D3|    []   |                       |    []   |>D3 
+         >D4|    []   |                       |    []   |>D4
+         >D5|    []   |                       |    []   |>D5
+         >D6|    []   |Tx                  Rx |    []   |>D6
+         >D7|    []   |---------------------->|    []   |>D7
+            |_________| [][][][][][][][]      |_________|
+    8bitParallel        8bitSerial                         8bitParallel   
+     data               data                               data
+      
+Actions:
+     Tx: > loading data in 1 tick pulse         |Rx : >Recieve&shift data in 8 tick pulses
+         > Transmit&shift data in 8 tick pulses |     >Transmit data in 1 tick pulse
+ 
+Baud Generator > generates tick pulses from clk i/p
+FSM > uses clk in UART
