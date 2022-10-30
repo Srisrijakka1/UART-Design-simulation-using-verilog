@@ -1,0 +1,36 @@
+1.Introduction to Serial Communication:
+----------------------------
+what is Parallel Communication:
+	>Data transfer b/w 2 modules is parallel
+	>it is high speed communication & low distance communication(<1feet)
+	>ex: In mother board data transfer b/w processor modules & other
+what is Serial Communication : 
+	>Data transfer b/w 2 modules is series 
+     >it is low speed communication & long distance communication(>1feet)
+     >ex: Communication b/w compputer & other Pheriperal devices
+
+limitations of parallel Communication:
+	>for longer distance(>1feet) parallel communication may leads to 
+errors in bits recevied in reciever modules due to wire thickness.
+
+how to avoid this error? 
+	Transmitter                              Reciever
+     -----------                              --------
+parallel           Serial                      Serial            parallel
+Communications >to>Communication   >tranfer>   Communication >to>Communication
+
+Serial communication : 
+    2types : 
+    >1.Synchronus serial communication
+       depends on clk               
+                 Tx > transer data in (negedge clk)
+			 Rx > recieve data in (posedge clk)             
+    >2.Asynchronus serial communication
+       doesnot depends on clk
+                  __________ ______ ____________
+           Tx  > |stopbit(1)| Data | startbit(0)| > Rx
+                 |__________|______|____________|
+
+
+
+
