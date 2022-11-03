@@ -30,4 +30,4 @@
  
  >>3.2.FSM UART Rx diagram to implement :     > EDA PlayGround Link:https://www.edaplayground.com/x/WWkQ
    
-  >> https://user-images.githubusercontent.com/106643865/199676805-c0b79b79-8596-49f3-92e6-f9e604074fcb.mp4
+  >>  https://user-images.githubusercontent.com/106643865/199692330-e8bb8fa0-bcc5-4704-89b1-d26ec7ebbb18.mp4
