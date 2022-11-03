@@ -24,7 +24,10 @@
  
   >> https://user-images.githubusercontent.com/106643865/199671649-eaa9b74b-ae90-4327-a8ff-3ad3daacc023.mp4
   
-  >>3.2.FSM UART Rx diagram to implement
+>3.Design to implement of UART Transmitter using FSM
+ 
+ >>![3 2 FSM UART Rx diagram to implement](https://user-images.githubusercontent.com/106643865/199677083-73136bb5-59e6-41b9-811e-d557bb1d55c8.jpg)  
+ 
+ >>3.2.FSM UART Rx diagram to implement
    
   >> https://user-images.githubusercontent.com/106643865/199676805-c0b79b79-8596-49f3-92e6-f9e604074fcb.mp4
-
