@@ -1,25 +1,4 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 30.10.2022 15:00:47
-// Design Name: 
-// Module Name: baudrate
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
-
 module baudrate(
     input wire clk,rst,
     output reg [11:0]q,
